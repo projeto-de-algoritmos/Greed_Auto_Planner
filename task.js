@@ -1,11 +1,12 @@
 class Task {
-    constructor(title, deadLine, timespan) {
+    constructor(title, deadLine, timespanDias, timespanHoras) {
         this.title = title;
-        this.deadLine = deadLine;
-        this.timespan = timespan;
+        this.deadLine = new Date(deadLine);
+        this.timespan = (parseInt(timespanDias) * 24) + parseInt(timespanHoras)
+        console.log(timespanHoras)
     }
 
-    taskTemplate(title, deadLine, timespan){
-        return `<div>${title} ${deadLine} ${timespan}</div>`;
+    generateHTML(){
+        return `<div class="task">${this.title} ${this.deadLine} ${this.timespan}</div>`;
     }
 }

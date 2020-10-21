@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
-    <script src="lol.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <script src="app.js"></script>
     <script src="task.js"></script>
     <title>imgay</title>
 </head>
 
-
 <body>
-    <input id="titleInput">
-    <input id="deadLineInput">
-    <input id="timespanInput">
-    <button onclick="submit()">Click me</button>
+    <div class="column">
+        <div id="taskList"></div>
+    </div>
 
-    <script>
-        let fonk = [];
-        for (let lol = 0; lol < 5; lol++) {
-            fonk.push(taskTemplate('shit', 'shit', 'shit'))
-        }
-        fonk = fonk.join('\n');
-        document.write(fonk)
-    </script>
+    <div class="column">
+        <div class="row">
+
+            <div class="column">
+                <div>Nome: </div>
+                <div>DeadLine: </div>
+                <div>Timespan: </div>
+            </div>
+
+            <div class="column">
+                <input id="titleInput">
+                <input id="deadLineInput">
+                <div class="row">
+                    <input id="timespanInputDias">
+                    Dias  
+                    <input id="timespanInputHoras">
+                    Horas
+                </div>
+                <button onclick="submit(
+                document.getElementById('titleInput').value,
+                document.getElementById('deadLineInput').value,
+                document.getElementById('timespanInputDias').value,
+                document.getElementById('timespanInputHoras').value
+                );
+                document.getElementById('titleInput').value = '';
+                document.getElementById('deadLineInput').value = '';
+                document.getElementById('timespanInputDias').value = '';
+                document.getElementById('timespanInputHoras').value = '';
+                ">Click me</button>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
