@@ -3,7 +3,9 @@ class Task {
         this.title = title;
         this.deadLine = new Date(deadLine);
         this.timespan = (parseInt(timespanDias) * 24) + parseInt(timespanHoras)
-        console.log(timespanHoras)
+        this.start = 0;
+        this.finish = 0;
+        this.isLate = false;
     }
 
     generateHTML(){
