@@ -18,12 +18,12 @@ function computeTasks(taskArray){
     sorted.forEach(task => {
         let aux = task.deadLineDisplay - Date.now();
         task.deadLine = ((aux/1000)/60)/60;
-        console.log(task.title, task.deadLine)
         task.start = current;
         task.finish = current + task.timespan;
         current += task.timespan;    
         if(task.finish > task.deadLine){
             task.isLate = true
+            task.lateness = task.finish - task.deadLine;
         }
         task.startInterval = new Date(Date.now() + (((task.start*60)*60)*1000))
         task.finishInterval = new Date(Date.now() + (((task.finish*60)*60)*1000))
