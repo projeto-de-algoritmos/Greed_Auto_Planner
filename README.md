@@ -1,7 +1,5 @@
 # [Greed AutoPlanner](https://projeto-de-algoritmos.github.io/Greed_Auto_Planner/)
 
-# NomedoProjeto
-
 **Número da Lista**: 3<br>
 **Conteúdo da Disciplina**: Greed<Xbr>
 
