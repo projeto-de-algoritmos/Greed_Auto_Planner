@@ -10,9 +10,8 @@ class Task {
             this.timespan = 0;
         }
         if(timespanHoras != '') {
-            this.timespan += timespanHoras;
+            this.timespan += parseInt(timespanHoras);
         }
-        // this.timespan = (parseInt(timespanDias) * 24) + parseInt(timespanHoras)
         this.start = 0;
         this.finish = 0;
         this.isLate = false;
@@ -20,18 +19,18 @@ class Task {
         this.finishInterval;
     }
 
+    latenessHtml = () => {
+        if(this.isLate) {
+            return `<foreignObject x="5%" y="80%" width="150" height="100" >
+                        <p xmlns="http://www.w3.org/1999/xhtml" style="color:red">Atraso: ${Math.ceil(this.lateness)} horas</p>
+                    </foreignObject>`
+        } else {
+            return '';
+        }
+        
+    }
 
     generateHTML() {
-        const latenessHtml = () => {
-            if(this.isLate) {
-                return `<foreignObject x="5%" y="80%" width="150" height="100" >
-                            <p xmlns="http://www.w3.org/1999/xhtml" style="color:red">Atraso: ${Math.ceil(this.lateness)} horas</p>
-                        </foreignObject>`
-            } else {
-                return '';
-            }
-            
-        }
         return `<svg width="300" height="301" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="300" height="301" fill="#ffffff" />
 
@@ -63,7 +62,7 @@ class Task {
                 <p xmlns="http://www.w3.org/1999/xhtml">Fim ${this.finishInterval.toLocaleDateString()} ${this.finishInterval.getHours()}:${this.finishInterval.getMinutes()}</p>
             </foreignObject>
 
-            ${latenessHtml()}
+            ${this.latenessHtml()}
 
             <foreignObject x="85%" y="85%" width="20" height="150">
             <div

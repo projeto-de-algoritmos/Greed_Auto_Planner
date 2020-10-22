@@ -1,45 +1,39 @@
-# [Greed_Auto Planner](https://projeto-de-algoritmos.github.io/Greed_Auto_Planner/)
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
+# [Greed AutoPlanner](https://projeto-de-algoritmos.github.io/Greed_Auto_Planner/)
 
 # NomedoProjeto
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 3<br>
+**Conteúdo da Disciplina**: Greed<Xbr>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 17/0102343  |  Eduardo Vieira Lima |
+| 17/0109208  |  Luis Henrique Pereira Taira |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Organizador de tarefas que ordena as tarefas automáticamente para ter o mínimo atraso possível
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![](assets/screenshot1.png)
+
+### Pré requisitos
+Ter instalado um navegador de internet.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: javascript<br>
+
+* Abrir o arquivo index.html em um navegador (arrastar o arquivo para uma janela de navegador aberta
+* Ou rodar na raiz do projeto
+```
+$ python -m http.server 8080
+```
+ou usar qualquer servidor http de sua preferência.
+* Ou usar o deploy clicando [aqui](https://projeto-de-algoritmos.github.io/Greed_Auto_Planner/)
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+* Criar múltiplas tarefas preenchendo todos os campos
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
-
+Foi usado o algorítimo de minimização de atraso.
