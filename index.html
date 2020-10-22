@@ -10,41 +10,41 @@
 
 <body>
     <div class="column">
-        <div id="taskList"></div>
+        <div id="taskList" class="taskList"></div>
     </div>
 
     <div class="column">
         <div class="row">
 
-            <div class="column">
+            <div class="column labels input-area">
                 <div>Nome: </div>
-                <div>DeadLine: </div>
-                <div>Timespan: </div>
+                <div>Data limite: </div>
+                <div>Tempo nescessário: </div>
             </div>
 
-            <div class="column">
-                <input id="titleInput">
-                <input id="deadLineInput">
+            <div class="column input-area">
+                <input id="titleInput" class="input-long">
+                <input id="deadLineInput" class="input-xlong" type="date">
                 <div class="row">
-                    <input id="timespanInputDias">
-                    Dias  
-                    <input id="timespanInputHoras">
-                    Horas
+                    <input id="timespanInputDias" class="input-short">
+                    <p class="type">Dias</p>
+                    <input id="timespanInputHoras" class="input-short">
+                    <p class="type">Horas</p>
                 </div>
-                <button onclick="submit(
-                document.getElementById('titleInput').value,
-                document.getElementById('deadLineInput').value,
-                document.getElementById('timespanInputDias').value,
-                document.getElementById('timespanInputHoras').value
-                );
-                document.getElementById('titleInput').value = '';
-                document.getElementById('deadLineInput').value = '';
-                document.getElementById('timespanInputDias').value = '';
-                document.getElementById('timespanInputHoras').value = '';
-                ">Click me</button>
 
             </div>
         </div>
+        <button onclick="submit(
+        document.getElementById('titleInput').value,
+        document.getElementById('deadLineInput').value,
+        document.getElementById('timespanInputDias').value,
+        document.getElementById('timespanInputHoras').value
+        );
+        document.getElementById('titleInput').value = '';
+        document.getElementById('deadLineInput').value = '';
+        document.getElementById('timespanInputDias').value = '';
+        document.getElementById('timespanInputHoras').value = '';
+        ">Click me</button>
     </div>
 
 </body>

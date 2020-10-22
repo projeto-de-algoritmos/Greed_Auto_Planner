@@ -1,3 +1,25 @@
+body {
+    display: flex;
+}
+
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-long {
+    width: 100px;
+}
+
+.input-xlong {
+    width: 130px;
+}
+
+.input-short {
+    width: 50px;
+}
+
 .titleText {
     fill: darkblue;
 }
@@ -10,13 +32,22 @@
     color: darkblue;
 }
 
-body {
-    display: flex;
-}
-
 .column {
     display: flex;
     flex-direction: column;
+}
+
+.input-area {
+    justify-content: space-evenly;
+}
+
+.type {
+    margin: 0%;
+    margin-right: 15px;
+}
+
+.labels {
+    align-items: flex-end;
 }
 
 .row {
