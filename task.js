@@ -7,6 +7,8 @@ class Task {
         this.start = 0;
         this.finish = 0;
         this.isLate = false;
+        this.startInterval;
+        this.finishInterval;
     }
 
     generateHTML() {
@@ -30,7 +32,15 @@ class Task {
             </foreignObject>
 
             <foreignObject x="5%" y="55%" width="150" height="150">
-                <p xmlns="http://www.w3.org/1999/xhtml">${this.timespan}</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">${this.timespan} Horas</p>
+            </foreignObject>
+
+            <foreignObject x="5%" y="65%" width="300" height="150">
+                <p xmlns="http://www.w3.org/1999/xhtml">Início ${this.startInterval.toLocaleDateString()} ${this.startInterval.getHours()}:${this.startInterval.getMinutes()}</p>
+            </foreignObject>
+
+            <foreignObject x="5%" y="70%" width="150" height="150">
+                <p xmlns="http://www.w3.org/1999/xhtml">Fim ${this.finishInterval.toLocaleDateString()} ${this.finishInterval.getHours()}:${this.finishInterval.getMinutes()}</p>
             </foreignObject>
 
             <foreignObject x="85%" y="85%" width="150" height="150">

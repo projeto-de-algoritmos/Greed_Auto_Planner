@@ -3,7 +3,7 @@ function ISort(taskArray){
     for(let i = 0; i < taskArray.length; i++){
         let j = i - 1;
         let aux = taskArray[i]
-        while(j >= 0 && taskArray[j].deadLine > aux.deadLine){
+        while(j >= 0 && taskArray[j].deadLine < aux.deadLine){
             taskArray[j+1] = taskArray[j]
             j--;
         }
@@ -25,6 +25,8 @@ function computeTasks(taskArray){
         if(task.finish > task.deadLine){
             task.isLate = true
         }
+        task.startInterval = new Date(Date.now() + (((task.start*60)*60)*1000))
+        task.finishInterval = new Date(Date.now() + (((task.finish*60)*60)*1000))
     })
 
     return sorted
