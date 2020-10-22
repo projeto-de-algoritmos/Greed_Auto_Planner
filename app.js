@@ -6,7 +6,9 @@ function submit(titleInput, deadLineInput, timespanInput, timespanHoras) {
 
 function writeTasks() {
     let fonk = [];
-    tasks.forEach((task) => {
+    let computedTasks = computeTasks(tasks);
+    console.log(computedTasks)
+    computedTasks.forEach((task) => {
         fonk.push(task.generateHTML());
     })
     
