@@ -1,11 +1,11 @@
 
 function ISort(taskArray){
-    for(let i = 0; i < taskArray.lenght; i++){
+    for(let i = 0; i < taskArray.length; i++){
         let j = i - 1;
-        let aux = taskArray[i].deadline
-        while(j >= 0 && taskArray[j].deadline > aux){
-            taskArray[j+1] = nums[j]
-            j--
+        let aux = taskArray[i]
+        while(j >= 0 && taskArray[j].deadLine > aux.deadLine){
+            taskArray[j+1] = taskArray[j]
+            j--;
         }
         taskArray[j+1] = aux
     }
@@ -14,15 +14,15 @@ function ISort(taskArray){
 
 function computeTasks(taskArray){
     let sorted = ISort(taskArray)
-
     let current = 0;
     sorted.forEach(task => {
-        let aux = task.deadline - Date.now();
-        task.deadline = aux/3600000;
+        let aux = task.deadLineDisplay - Date.now();
+        task.deadLine = ((aux/1000)/60)/60;
+        console.log(task.title, task.deadLine)
         task.start = current;
         task.finish = current + task.timespan;
         current += task.timespan;    
-        if(task.finish > task.deadline){
+        if(task.finish > task.deadLine){
             task.isLate = true
         }
     })

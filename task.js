@@ -2,6 +2,7 @@ class Task {
     constructor(title, deadLine, timespanDias, timespanHoras) {
         this.title = title;
         this.deadLine = new Date(deadLine);
+        this.deadLineDisplay = new Date(deadLine);
         this.timespan = (parseInt(timespanDias) * 24) + parseInt(timespanHoras)
         this.start = 0;
         this.finish = 0;
@@ -21,7 +22,7 @@ class Task {
             </foreignObject>
 
             <foreignObject x="5%" y="25%" width="150" height="150">
-                <p xmlns="http://www.w3.org/1999/xhtml">${this.deadLine.toLocaleDateString()}</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">${this.deadLineDisplay.toLocaleDateString()}</p>
             </foreignObject>
 
             <foreignObject x="5%" y="50%" width="150" height="150">
@@ -34,7 +35,7 @@ class Task {
 
             <foreignObject x="85%" y="85%" width="150" height="150">
             <div
-            onclick="console.log('shronbs')"
+            onclick="removeTask('${this.title}')"
             >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="delete_outline_24px">
