@@ -35,3 +35,7 @@ ou usar qualquer servidor http de sua preferência.
 
 ## Outros 
 Foi usado o algorítimo de minimização de atraso.
+
+## Video
+
+<video src="video.mp4"></video>
